@@ -1,0 +1,18 @@
+[build]
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[forms]]
+  name = "field-questionnaire"
+
+[forms.field-questionnaire]
+  fields = [
+    { name = "question1", type = "textarea" },
+    { name = "question2", type = "textarea" },
+    { name = "question3", type = "textarea" },
+    { name = "question4", type = "textarea" },
+    { name = "question5", type = "textarea" },
+    { name = "question6", type = "textarea" }
+  ]
