@@ -92,18 +92,59 @@
         .question-group {
             margin-bottom: 2rem;
             padding: 2.5rem;
-            background: rgba(255, 255, 255, 0.9);
+            background:
+                radial-gradient(circle at 20% 80%, rgba(245, 245, 245, 0.8) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(250, 250, 250, 0.6) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(248, 248, 248, 0.4) 0%, transparent 50%),
+                linear-gradient(135deg, #f8f9fa 0%, #f5f5f5 50%, #f0f0f0 100%);
             border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(220, 220, 220, 0.6);
+            box-shadow:
+                0 4px 20px rgba(0, 0, 0, 0.08),
+                inset 0 1px 3px rgba(255, 255, 255, 0.8),
+                inset 0 -1px 2px rgba(0, 0, 0, 0.05);
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .question-group::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0, 0, 0, 0.01) 2px,
+                    rgba(0, 0, 0, 0.01) 4px
+                ),
+                repeating-linear-gradient(
+                    -45deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0, 0, 0, 0.01) 2px,
+                    rgba(0, 0, 0, 0.01) 4px
+                );
+            border-radius: 16px;
+            pointer-events: none;
         }
 
         .question-group:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-            background: rgba(255, 255, 255, 0.95);
+            box-shadow:
+                0 12px 40px rgba(0, 0, 0, 0.15),
+                inset 0 1px 4px rgba(255, 255, 255, 0.9),
+                inset 0 -1px 3px rgba(0, 0, 0, 0.08);
+            background:
+                radial-gradient(circle at 20% 80%, rgba(250, 250, 250, 0.9) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.7) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(252, 252, 252, 0.5) 0%, transparent 50%),
+                linear-gradient(135deg, #fafafa 0%, #f7f7f7 50%, #f2f2f2 100%);
         }
 
         .question-number {
@@ -135,12 +176,38 @@
         }
 
         .examples {
-            background: rgba(248, 250, 252, 0.9);
+            background:
+                radial-gradient(circle at 30% 70%, rgba(245, 245, 245, 0.7) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(250, 250, 250, 0.5) 0%, transparent 50%),
+                linear-gradient(125deg, #f5f5f5 0%, #f0f0f0 50%, #ebebeb 100%);
             padding: 1.5rem;
             border-radius: 12px;
             margin-bottom: 2rem;
-            border: 1px solid rgba(226, 232, 240, 0.8);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(215, 215, 215, 0.6);
+            box-shadow:
+                0 2px 8px rgba(0, 0, 0, 0.04),
+                inset 0 1px 2px rgba(255, 255, 255, 0.6),
+                inset 0 -1px 1px rgba(0, 0, 0, 0.03);
+            position: relative;
+        }
+
+        .examples::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                repeating-linear-gradient(
+                    30deg,
+                    transparent,
+                    transparent 1px,
+                    rgba(0, 0, 0, 0.008) 1px,
+                    rgba(0, 0, 0, 0.008) 3px
+                );
+            border-radius: 12px;
+            pointer-events: none;
         }
 
         .examples-title {
