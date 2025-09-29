@@ -282,6 +282,10 @@
         .submit-container {
             text-align: center;
             margin-top: 3rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .submit-btn {
@@ -305,6 +309,53 @@
 
         .submit-btn:active {
             transform: translateY(0);
+        }
+
+        .save-btn {
+            background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+            color: white;
+            border: none;
+            padding: 1rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(100, 116, 139, 0.3);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        .save-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(100, 116, 139, 0.4);
+        }
+
+        .save-btn:active {
+            transform: translateY(0);
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid rgba(226, 232, 240, 0.8);
+            border-radius: 8px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 1rem;
+            color: #333;
+            background: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+        }
+
+        input[type="email"]:focus {
+            outline: none;
+            border-color: #a855f7;
+            box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+            background: rgba(255, 255, 255, 1);
+        }
+
+        input[type="email"]::placeholder {
+            color: #94a3b8;
+            font-style: italic;
         }
 
         /* Magical floating particles effect */
@@ -462,12 +513,20 @@
                 <textarea name="question6" placeholder="Dream into what's possible..." required></textarea>
             </div>
 
+            <div class="question-group">
+                <div class="question-number">Email Address</div>
+                <h3 class="question">Your email address</h3>
+                <p class="question-explanation">Required for saving your responses or submitting your reflection. We'll only use this to send you a copy of your responses if requested.</p>
+                <input type="email" name="email" placeholder="your@email.com" required />
+            </div>
+
             <div class="closing-section">
                 <h3 class="closing-title">Closing Reflection</h3>
                 <p class="closing-text">You don't need to label your field as "good" or "bad." Most fields are mixed. The invitation is simply to see the architecture you're in—and decide whether it's the one you want shaping your future.</p>
             </div>
 
             <div class="submit-container">
+                <button type="button" class="save-btn" onclick="saveForLater()">Save for Later</button>
                 <button type="submit" class="submit-btn">Submit Your Reflection</button>
             </div>
         </form>
@@ -499,7 +558,61 @@
                     });
                 });
             });
+
+            // Load saved data if it exists
+            loadSavedData();
         });
+
+        function saveForLater() {
+            const form = document.querySelector('form[name="field-questionnaire"]');
+            const email = form.querySelector('input[name="email"]').value;
+
+            if (!email) {
+                alert('Please enter your email address to save your responses.');
+                form.querySelector('input[name="email"]').focus();
+                return;
+            }
+
+            const formData = new FormData(form);
+            const data = {};
+
+            for (let [key, value] of formData.entries()) {
+                if (key !== 'form-name' && key !== 'bot-field') {
+                    data[key] = value;
+                }
+            }
+
+            // Save to localStorage with email as key
+            localStorage.setItem('fieldQuestionnaire_' + email, JSON.stringify(data));
+
+            alert('Your responses have been saved! You can return to this page later and your answers will be restored when you enter the same email address.');
+        }
+
+        function loadSavedData() {
+            const emailInput = document.querySelector('input[name="email"]');
+
+            emailInput.addEventListener('blur', function() {
+                const email = this.value;
+                if (email) {
+                    const savedData = localStorage.getItem('fieldQuestionnaire_' + email);
+                    if (savedData) {
+                        const data = JSON.parse(savedData);
+
+                        // Restore form data
+                        for (let [key, value] of Object.entries(data)) {
+                            const field = document.querySelector(`[name="${key}"]`);
+                            if (field) {
+                                field.value = value;
+                            }
+                        }
+
+                        if (Object.keys(data).length > 1) { // More than just email
+                            alert('Welcome back! Your previously saved responses have been restored.');
+                        }
+                    }
+                }
+            });
+        }
     </script>
 </body>
 </html>
