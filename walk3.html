@@ -383,6 +383,32 @@
             50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
         }
 
+        /* Logo styles */
+        .logo-section {
+            position: relative;
+            width: 100%;
+            padding: 2rem 0 3rem 0;
+            text-align: center;
+        }
+
+        .logo-rotating {
+            width: 160px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+            animation: slowRotate 40s linear infinite;
+            transform-origin: center center;
+        }
+
+        @keyframes slowRotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
         /* Responsive design */
         @media (max-width: 768px) {
             .container {
@@ -404,6 +430,10 @@
     </style>
 </head>
 <body>
+    <div class="logo-section">
+        <img src="logoNoText.png" alt="logo" class="logo-rotating">
+    </div>
+
     <div class="particles">
         <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
         <div class="particle" style="left: 20%; animation-delay: 1s;"></div>
