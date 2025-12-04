@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Walk 4 - Field Exit 11.5 - Reflection Questions</title>
+    <title>Walk 3 - Clarity Diagnostic</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -16,9 +16,9 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             min-height: 100vh;
-            color: #e4e4e7;
+            color: #333;
             line-height: 1.6;
         }
 
@@ -38,17 +38,46 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             font-size: 2.2rem;
             font-weight: 500;
-            color: #60a5fa;
+            color: #000;
             margin-bottom: 0.5rem;
             letter-spacing: -0.01em;
         }
 
         .subtitle {
             font-size: 1rem;
-            color: #94a3b8;
+            color: #666;
             font-weight: 400;
             max-width: 600px;
             margin: 0 auto;
+        }
+
+        .purpose-section {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .purpose-title {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 1.3rem;
+            color: #000;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .purpose-text {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .how-to-use {
+            font-style: italic;
+            color: #475569;
+            font-size: 0.95rem;
         }
 
         .form-container {
@@ -64,16 +93,16 @@
             margin-bottom: 2rem;
             padding: 2.5rem;
             background:
-                radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(96, 165, 250, 0.08) 0%, transparent 50%),
-                linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%);
+                radial-gradient(circle at 20% 80%, rgba(245, 245, 245, 0.8) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(250, 250, 250, 0.6) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(248, 248, 248, 0.4) 0%, transparent 50%),
+                linear-gradient(135deg, #f8f9fa 0%, #f5f5f5 50%, #f0f0f0 100%);
             border-radius: 16px;
-            border: 1px solid rgba(96, 165, 250, 0.2);
+            border: 1px solid rgba(220, 220, 220, 0.6);
             box-shadow:
-                0 4px 20px rgba(0, 0, 0, 0.4),
-                inset 0 1px 3px rgba(96, 165, 250, 0.1),
-                inset 0 -1px 2px rgba(0, 0, 0, 0.2);
+                0 4px 20px rgba(0, 0, 0, 0.08),
+                inset 0 1px 3px rgba(255, 255, 255, 0.8),
+                inset 0 -1px 2px rgba(0, 0, 0, 0.05);
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
             position: relative;
@@ -91,15 +120,15 @@
                     45deg,
                     transparent,
                     transparent 2px,
-                    rgba(96, 165, 250, 0.03) 2px,
-                    rgba(96, 165, 250, 0.03) 4px
+                    rgba(0, 0, 0, 0.01) 2px,
+                    rgba(0, 0, 0, 0.01) 4px
                 ),
                 repeating-linear-gradient(
                     -45deg,
                     transparent,
                     transparent 2px,
-                    rgba(96, 165, 250, 0.03) 2px,
-                    rgba(96, 165, 250, 0.03) 4px
+                    rgba(0, 0, 0, 0.01) 2px,
+                    rgba(0, 0, 0, 0.01) 4px
                 );
             border-radius: 16px;
             pointer-events: none;
@@ -108,58 +137,57 @@
         .question-group:hover {
             transform: translateY(-4px);
             box-shadow:
-                0 12px 40px rgba(0, 0, 0, 0.5),
-                inset 0 1px 4px rgba(96, 165, 250, 0.15),
-                inset 0 -1px 3px rgba(0, 0, 0, 0.3);
+                0 12px 40px rgba(0, 0, 0, 0.15),
+                inset 0 1px 4px rgba(255, 255, 255, 0.9),
+                inset 0 -1px 3px rgba(0, 0, 0, 0.08);
             background:
-                radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.17) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(96, 165, 250, 0.12) 0%, transparent 50%),
-                linear-gradient(135deg, rgba(30, 41, 59, 1) 0%, rgba(15, 23, 42, 1) 100%);
+                radial-gradient(circle at 20% 80%, rgba(250, 250, 250, 0.9) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.7) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(252, 252, 252, 0.5) 0%, transparent 50%),
+                linear-gradient(135deg, #fafafa 0%, #f7f7f7 50%, #f2f2f2 100%);
         }
 
         .question-number {
             font-size: 0.85rem;
-            color: #60a5fa;
+            color: #a855f7;
             font-weight: 600;
             margin-bottom: 1rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
             display: inline-block;
             padding: 0.5rem 1rem;
-            background: rgba(96, 165, 250, 0.15);
+            background: rgba(168, 85, 247, 0.1);
             border-radius: 20px;
-            border: 1px solid rgba(96, 165, 250, 0.3);
         }
 
         .question {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             font-size: 1.2rem;
-            color: #e0e7ff;
+            color: #000;
             margin-bottom: 1rem;
             font-weight: 500;
         }
 
         .question-explanation {
             font-size: 0.95rem;
-            color: #94a3b8;
+            color: #64748b;
             margin-bottom: 1.5rem;
             font-style: italic;
         }
 
         .examples {
             background:
-                radial-gradient(circle at 30% 70%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
-                linear-gradient(125deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.6) 100%);
+                radial-gradient(circle at 30% 70%, rgba(245, 245, 245, 0.7) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(250, 250, 250, 0.5) 0%, transparent 50%),
+                linear-gradient(125deg, #f5f5f5 0%, #f0f0f0 50%, #ebebeb 100%);
             padding: 1.5rem;
             border-radius: 12px;
             margin-bottom: 2rem;
-            border: 1px solid rgba(96, 165, 250, 0.15);
+            border: 1px solid rgba(215, 215, 215, 0.6);
             box-shadow:
-                0 2px 8px rgba(0, 0, 0, 0.3),
-                inset 0 1px 2px rgba(96, 165, 250, 0.08),
-                inset 0 -1px 1px rgba(0, 0, 0, 0.2);
+                0 2px 8px rgba(0, 0, 0, 0.04),
+                inset 0 1px 2px rgba(255, 255, 255, 0.6),
+                inset 0 -1px 1px rgba(0, 0, 0, 0.03);
             position: relative;
         }
 
@@ -175,8 +203,8 @@
                     30deg,
                     transparent,
                     transparent 1px,
-                    rgba(96, 165, 250, 0.02) 1px,
-                    rgba(96, 165, 250, 0.02) 3px
+                    rgba(0, 0, 0, 0.008) 1px,
+                    rgba(0, 0, 0, 0.008) 3px
                 );
             border-radius: 12px;
             pointer-events: none;
@@ -184,7 +212,7 @@
 
         .examples-title {
             font-size: 0.85rem;
-            color: #60a5fa;
+            color: #475569;
             font-weight: 600;
             margin-bottom: 0.5rem;
             text-transform: uppercase;
@@ -193,40 +221,62 @@
 
         .example {
             font-size: 0.9rem;
-            color: #94a3b8;
+            color: #64748b;
             margin-bottom: 0.3rem;
             font-style: italic;
         }
 
         .example:before {
             content: "• ";
-            color: #60a5fa;
+            color: #a855f7;
         }
 
         textarea {
             width: 100%;
             min-height: 120px;
             padding: 1rem;
-            border: 2px solid rgba(96, 165, 250, 0.2);
+            border: 2px solid rgba(226, 232, 240, 0.8);
             border-radius: 8px;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             font-size: 1rem;
-            color: #e4e4e7;
-            background: rgba(30, 41, 59, 0.8);
+            color: #333;
+            background: rgba(255, 255, 255, 0.9);
             transition: all 0.3s ease;
             resize: vertical;
         }
 
         textarea:focus {
             outline: none;
-            border-color: #60a5fa;
-            box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
-            background: rgba(30, 41, 59, 0.95);
+            border-color: #a855f7;
+            box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+            background: rgba(255, 255, 255, 1);
         }
 
         textarea::placeholder {
-            color: #64748b;
+            color: #94a3b8;
             font-style: italic;
+        }
+
+        .closing-section {
+            background: rgba(168, 85, 247, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .closing-title {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 1.2rem;
+            color: #000;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .closing-text {
+            font-size: 1rem;
+            color: #475569;
+            line-height: 1.7;
         }
 
         .submit-container {
@@ -239,7 +289,7 @@
         }
 
         .submit-btn {
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
             color: white;
             border: none;
             padding: 1rem 3rem;
@@ -248,13 +298,13 @@
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
         .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+            box-shadow: 0 8px 25px rgba(168, 85, 247, 0.4);
         }
 
         .submit-btn:active {
@@ -262,7 +312,7 @@
         }
 
         .save-btn {
-            background: linear-gradient(135deg, #475569 0%, #334155 100%);
+            background: linear-gradient(135deg, #64748b 0%, #475569 100%);
             color: white;
             border: none;
             padding: 1rem 3rem;
@@ -271,17 +321,41 @@
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(71, 85, 105, 0.4);
+            box-shadow: 0 4px 15px rgba(100, 116, 139, 0.3);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
         .save-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(71, 85, 105, 0.5);
+            box-shadow: 0 8px 25px rgba(100, 116, 139, 0.4);
         }
 
         .save-btn:active {
             transform: translateY(0);
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid rgba(226, 232, 240, 0.8);
+            border-radius: 8px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 1rem;
+            color: #333;
+            background: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+        }
+
+        input[type="email"]:focus {
+            outline: none;
+            border-color: #a855f7;
+            box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+            background: rgba(255, 255, 255, 1);
+        }
+
+        input[type="email"]::placeholder {
+            color: #94a3b8;
+            font-style: italic;
         }
 
         /* Magical floating particles effect */
@@ -299,7 +373,7 @@
             position: absolute;
             width: 4px;
             height: 4px;
-            background: rgba(96, 165, 250, 0.4);
+            background: rgba(168, 85, 247, 0.3);
             border-radius: 50%;
             animation: float 6s infinite ease-in-out;
         }
@@ -344,105 +418,125 @@
 
     <div class="container">
         <div class="header">
-            <h1 class="title">Tim — Walk 4 (Field Exit 11.5) — Reflection Questions</h1>
+            <h1 class="title">Walk 3 - Clarity Diagnostic</h1>
         </div>
 
-        <form name="walk-4-field-exit" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" class="form-container">
-            <input type="hidden" name="form-name" value="walk-4-field-exit" />
+        <form name="clarity-diagnostic-walk" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" class="form-container">
+            <input type="hidden" name="form-name" value="clarity-diagnostic-walk" />
             <p style="display: none;">
                 <label>Don't fill this out if you're human: <input name="bot-field" /></label>
             </p>
 
             <div class="question-group">
                 <div class="question-number">Question 1</div>
-                <h3 class="question">Starting State</h3>
-                <p class="question-explanation">How "done" with the old field did you feel when we began?</p>
+                <h3 class="question">Starting Point</h3>
+                <p class="question-explanation">When we started, how clear or uncertain did you feel about what to do next?</p>
                 <div class="examples">
-                    <div class="examples-title">Why this matters:</div>
-                    <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 0.75rem;">Shows how much residue was present before the walk.</p>
+                    <div class="examples-title">Why This Matters</div>
+                    <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 0.75rem;">It helps us understand what kind of state you were in before the walk — whether you needed problem-solving or just confirmation.</p>
                     <div class="examples-title" style="margin-top: 1rem;">Examples</div>
-                    <div class="example">"Completely done, just tired."</div>
-                    <div class="example">"I knew it was over but was still carrying a little of it."</div>
+                    <div class="example">"I felt fine, just needed to test my thinking."</div>
+                    <div class="example">"I wasn't stuck, just unsure which path made most sense."</div>
                 </div>
-                <textarea name="starting_state" placeholder="Your response..."></textarea>
+                <textarea name="starting_point" placeholder="Your response..."></textarea>
             </div>
 
             <div class="question-group">
                 <div class="question-number">Question 2</div>
-                <h3 class="question">Fit of the Walk</h3>
-                <p class="question-explanation">Did the depth of this protocol match where you actually were?</p>
+                <h3 class="question">Fit of the Questions</h3>
+                <p class="question-explanation">Did the questions feel about right for where you were at, or did they go deeper than you needed?</p>
                 <div class="examples">
-                    <div class="examples-title">Why this matters:</div>
-                    <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 0.75rem;">Residue clearing must match the founder's internal state.</p>
+                    <div class="examples-title">Why This Matters</div>
+                    <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 0.75rem;">It helps us calibrate how the system matches tone and depth when someone's already clear-headed.</p>
                     <div class="examples-title" style="margin-top: 1rem;">Examples</div>
-                    <div class="example">"It was the right depth — clean and simple."</div>
-                    <div class="example">"It went a bit deeper than expected but in a good way."</div>
+                    <div class="example">"They fit perfectly — it was clarifying, not heavy."</div>
+                    <div class="example">"Some questions went a bit deeper than I needed this time."</div>
                 </div>
-                <textarea name="fit_of_walk" placeholder="Your response..."></textarea>
+                <textarea name="fit_of_questions" placeholder="Your response..."></textarea>
             </div>
 
             <div class="question-group">
                 <div class="question-number">Question 3</div>
-                <h3 class="question">Moment of Shift</h3>
-                <p class="question-explanation">At what point did the old field start to let go?</p>
+                <h3 class="question">When Clarity Landed</h3>
+                <p class="question-explanation">At what point did things start to feel obvious or self-evident?</p>
                 <div class="examples">
-                    <div class="examples-title">Why this matters:</div>
-                    <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 0.75rem;">Identifies where the real movement happened.</p>
+                    <div class="examples-title">Why This Matters</div>
+                    <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 0.75rem;">It shows which part of the walk actually produced clarity so we can streamline future sessions.</p>
                     <div class="examples-title" style="margin-top: 1rem;">Examples</div>
-                    <div class="example">"When I said I wasn't carrying people anymore."</div>
-                    <div class="example">"When I realised the trip was cutting the old ties."</div>
+                    <div class="example">"When we named that I'm a translator."</div>
+                    <div class="example">"When I said 'keep going' — that was the moment."</div>
                 </div>
-                <textarea name="moment_of_shift" placeholder="Your response..."></textarea>
+                <textarea name="when_clarity_landed" placeholder="Your response..."></textarea>
             </div>
 
             <div class="question-group">
                 <div class="question-number">Question 4</div>
-                <h3 class="question">Recognising the New Field</h3>
-                <p class="question-explanation">What told you the new field was real, not just an idea?</p>
+                <h3 class="question">Reading the Signal</h3>
+                <p class="question-explanation">How did you know the decision was clear, rather than just chosen?</p>
                 <div class="examples">
-                    <div class="examples-title">Why this matters:</div>
-                    <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 0.75rem;">Distinguishes actual field transition from wishful thinking.</p>
+                    <div class="examples-title">Why This Matters</div>
+                    <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 0.75rem;">We're looking for signs of true conviction, not just reasoning.</p>
                     <div class="examples-title" style="margin-top: 1rem;">Examples</div>
-                    <div class="example">"My body dropped into flow and calm."</div>
-                    <div class="example">"'Big' felt obvious instead of aspirational."</div>
+                    <div class="example">"I stopped analysing — it just felt settled."</div>
+                    <div class="example">"The competitor stopped feeling like a threat."</div>
                 </div>
-                <textarea name="recognising_new_field" placeholder="Your response..."></textarea>
+                <textarea name="reading_the_signal" placeholder="Your response..."></textarea>
             </div>
 
             <div class="question-group">
                 <div class="question-number">Question 5</div>
                 <h3 class="question">Energy After the Walk</h3>
-                <p class="question-explanation">How did you feel afterwards — lighter, clearer, more grounded?</p>
+                <p class="question-explanation">How did you feel afterwards — energised, calm, tired, focused?</p>
                 <div class="examples">
-                    <div class="examples-title">Why this matters:</div>
-                    <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 0.75rem;">A residue walk should stabilise energy, not drain it.</p>
+                    <div class="examples-title">Why This Matters</div>
+                    <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 0.75rem;">It helps us see if the walk maintains energy and clarity without draining you.</p>
                     <div class="examples-title" style="margin-top: 1rem;">Examples</div>
-                    <div class="example">"Clear and grounded."</div>
-                    <div class="example">"Light, with no backward pull."</div>
+                    <div class="example">"Relaxed and focused."</div>
+                    <div class="example">"No big emotional hit, just solid clarity."</div>
                 </div>
                 <textarea name="energy_after_walk" placeholder="Your response..."></textarea>
             </div>
 
             <div class="question-group">
                 <div class="question-number">Question 6</div>
-                <h3 class="question">What You're Carrying Forward</h3>
-                <p class="question-explanation">What is the one thing you're taking into your next field from this walk?</p>
+                <h3 class="question">What You Took Away</h3>
+                <p class="question-explanation">What's the clearest takeaway or next step you left with?</p>
                 <div class="examples">
-                    <div class="examples-title">Why this matters:</div>
-                    <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 0.75rem;">Residue clearing ends with one stable forward-facing truth.</p>
+                    <div class="examples-title">Why This Matters</div>
+                    <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 0.75rem;">A good walk ends with one specific action or realisation, not a long list.</p>
                     <div class="examples-title" style="margin-top: 1rem;">Examples</div>
-                    <div class="example">"It must serve me first."</div>
-                    <div class="example">"I move toward big from alignment."</div>
-                    <div class="example">"If the energy isn't good, I won't start."</div>
+                    <div class="example">"Talk to the guy who found the other platform."</div>
+                    <div class="example">"Focus the product on empowerment, not volume."</div>
                 </div>
-                <textarea name="carrying_forward" placeholder="Your response..."></textarea>
+                <textarea name="what_you_took_away" placeholder="Your response..."></textarea>
             </div>
 
             <div class="question-group">
-                <div class="question-number">Optional</div>
-                <h3 class="question">Anything Else?</h3>
-                <p class="question-explanation">Anything else you want to say about the walk or how it landed?</p>
-                <textarea name="anything_else" placeholder="Your response..."></textarea>
+                <div class="question-number">Question 7</div>
+                <h3 class="question">Overall Calibration</h3>
+                <p class="question-explanation">How well did the walk meet you where you were?</p>
+                <div class="examples">
+                    <div class="examples-title">Why This Matters</div>
+                    <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 0.75rem;">This helps us fine-tune how direct or deep the system goes depending on the founder's state.</p>
+                    <div class="examples-title" style="margin-top: 1rem;">Examples</div>
+                    <div class="example">"It matched me perfectly."</div>
+                    <div class="example">"It could have been shorter once clarity arrived."</div>
+                </div>
+                <textarea name="overall_calibration" placeholder="Your response..."></textarea>
+            </div>
+
+            <div class="question-group">
+                <div class="question-number">Question 8</div>
+                <h3 class="question">Confidence in the Outcome</h3>
+                <p class="question-explanation">How confident do you feel that this clarity will hold over the next few weeks?</p>
+                <div class="examples">
+                    <div class="examples-title">Why This Matters</div>
+                    <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 0.75rem;">We want to know if what landed feels stable or temporary.</p>
+                    <div class="examples-title" style="margin-top: 1rem;">Examples</div>
+                    <div class="example">"It feels solid — same direction, just clearer."</div>
+                    <div class="example">"Still early, but it feels consistent."</div>
+                </div>
+                <textarea name="confidence_in_outcome" placeholder="Your response..."></textarea>
             </div>
 
             <div class="submit-container">
@@ -484,7 +578,7 @@
         });
 
         function saveForLater() {
-            const form = document.querySelector('form[name="walk-4-field-exit"]');
+            const form = document.querySelector('form[name="clarity-diagnostic-walk"]');
             const formData = new FormData(form);
             const data = {};
 
@@ -495,13 +589,13 @@
             }
 
             // Save to localStorage
-            localStorage.setItem('walk4FieldExit', JSON.stringify(data));
+            localStorage.setItem('clarityDiagnosticWalk', JSON.stringify(data));
 
             alert('Your responses have been saved! You can return to this page later and your answers will be restored.');
         }
 
         function loadSavedData() {
-            const savedData = localStorage.getItem('walk4FieldExit');
+            const savedData = localStorage.getItem('clarityDiagnosticWalk');
             if (savedData) {
                 const data = JSON.parse(savedData);
 
