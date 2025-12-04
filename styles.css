@@ -104,6 +104,7 @@ p {
         linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
     border-radius: 16px;
     padding: 2rem;
+    margin-bottom: 2rem;
     border: 1px solid rgba(220,220,220,0.5);
     box-shadow:
         0 4px 20px rgba(0,0,0,0.06),
@@ -168,4 +169,46 @@ input:focus, textarea:focus {
     text-align: center;
     font-size: 0.9rem;
     color: rgba(0, 0, 0, 0.5);
+}
+
+/* ------------------------------
+   Accordion
+------------------------------ */
+.accordion {
+    margin-top: 1rem;
+}
+
+.accordion-header {
+    cursor: pointer;
+    padding: 0.75rem 0;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 500;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.accordion-header:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.accordion-icon {
+    transition: transform 0.3s ease;
+    font-size: 0.8rem;
+}
+
+.accordion-icon.open {
+    transform: rotate(90deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content.open {
+    max-height: 500px;
+    margin-bottom: 1rem;
 }
