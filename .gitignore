@@ -1,0 +1,16 @@
+# System files
+.DS_Store
+
+# Large media files (should never be in git)
+*.mov
+*.mp4
+*.avi
+
+# Build artifacts
+node_modules/
+.cache/
+dist/
+
+# Environment files
+.env
+.env.local

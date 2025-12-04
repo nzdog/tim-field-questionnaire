@@ -1,0 +1,28 @@
+# Documentation files
+*.docx
+*.pdf
+*.pages
+*.mov
+*.mp4
+*.avi
+
+# Directories with documentation
+Field Exit Series/
+Notion Onboardin/
+Tim's machine/
+Walk One/
+Karen's Stuff/
+
+# Older unused forms
+field-questionnaire.html
+form-detection.html
+
+# System files
+.DS_Store
+.claude/
+
+# Keep these (explicitly not ignored):
+# index.html
+# walk3.html
+# styles.css
+# thank-you.html

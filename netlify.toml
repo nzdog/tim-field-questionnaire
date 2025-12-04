@@ -4,6 +4,7 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# Form configurations
 [[forms]]
   name = "field-questionnaire"
 
@@ -15,4 +16,33 @@
     { name = "question4", type = "textarea" },
     { name = "question5", type = "textarea" },
     { name = "question6", type = "textarea" }
+  ]
+
+[[forms]]
+  name = "walk-4-field-exit"
+
+[forms.walk-4-field-exit]
+  fields = [
+    { name = "starting_state", type = "textarea" },
+    { name = "fit_of_walk", type = "textarea" },
+    { name = "moment_of_shift", type = "textarea" },
+    { name = "recognising_new_field", type = "textarea" },
+    { name = "energy_after_walk", type = "textarea" },
+    { name = "carrying_forward", type = "textarea" },
+    { name = "anything_else", type = "textarea" }
+  ]
+
+[[forms]]
+  name = "clarity-diagnostic-walk"
+
+[forms.clarity-diagnostic-walk]
+  fields = [
+    { name = "starting_point", type = "textarea" },
+    { name = "fit_of_questions", type = "textarea" },
+    { name = "when_clarity_landed", type = "textarea" },
+    { name = "reading_the_signal", type = "textarea" },
+    { name = "energy_after_walk", type = "textarea" },
+    { name = "what_you_took_away", type = "textarea" },
+    { name = "overall_calibration", type = "textarea" },
+    { name = "confidence_in_outcome", type = "textarea" }
   ]
